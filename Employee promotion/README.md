@@ -1,4 +1,4 @@
-# Supervised Learning * Employee Promotion Prediction
+# Supervised Learning - Employee Promotion Prediction
 ### Business context
 
 Employee Promotion means the ascension of an employee to higher ranks, this aspect of the job is what drives employees the most. The ultimate reward for dedication and loyalty towards an organization and the HR team plays an important role in handling all these promotion tasks based on ratings and other attributes available.
