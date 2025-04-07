@@ -1,26 +1,40 @@
-# Supervised Learning - OTT Viewership Prediction
+# Supervised Learning * Visa Approval Prediction
 ### Context
 
-An over-the-top (OTT) media service is a media service offered directly to viewers via the internet. The term is most synonymous with subscription-based video-on-demand services that offer access to film and television content, including existing series acquired from other producers, as well as original content produced specifically for the service. They are typically accessed via websites on personal computers, apps on smartphones and tablets, or televisions with integrated Smart TV platforms. Presently, OTT services are at a relatively nascent stage and are widely accepted as a trending technology across the globe. With the increasing change in customers' social behavior, which is shifting from traditional subscriptions to broadcasting services and OTT on-demand video and music subscriptions every year, OTT streaming is expected to grow at a very fast pace. The global OTT market size was valued at 121.61 billion dollars in 2019 and is projected to reach 1,039.03 billion dollars by 2027, growing at a CAGR of 29.4% from 2020 to 2027. The shift from television to OTT services for entertainment is driven by benefits such as on-demand services, ease of access, and access to better networks and digital connectivity. With the outbreak of COVID19, OTT services are striving to meet the growing entertainment appetite of viewers, with some platforms already experiencing a 46% increase in consumption and subscriber count as viewers seek fresh content. With innovations and advanced transformations, which will enable the customers to access everything they want in a single space, OTT platforms across the world are expected to increasingly attract subscribers on a concurrent basis.
+Business communities in the United States are facing high demand for human resources, but one of the constant challenges is identifying and attracting the right talent, which is perhaps the most important element in remaining competitive. Companies in the United States look for hard-working, talented, and qualified individuals both locally as well as abroad.
+
+The Immigration and Nationality Act (INA) of the US permits foreign workers to come to the United States to work on either a temporary or permanent basis. The act also protects US workers against adverse impacts on their wages or working conditions by ensuring US employers' compliance with statutory requirements when they hire foreign workers to fill workforce shortages. The immigration programs are administered by the Office of Foreign Labor Certification (OFLC).
+
+OFLC processes job certification applications for employers seeking to bring foreign workers into the United States and grants certifications in those cases where employers can demonstrate that there are not sufficient US workers available to perform the work at wages that meet or exceed the wage paid for the occupation in the area of intended employment.
 
 ### Objective
 
-ShowTime is an OTT service provider and offers a wide variety of content (movies, web shows, etc.) for its users. They want to determine the driver variables for first-day content viewership so that they can take necessary measures to improve the viewership of the content on their platform. Some of the reasons for the decline in viewership of content would be the decline in the number of people coming to the platform, decreased marketing spend, content timing clashes, weekends and holidays, etc. They have hired you as a Data Scientist, shared the data of the current content in their platform, and asked you to analyze the data and come up with a linear regression model to determine the driving factors for first-day viewership.
+In FY 2016, the OFLC processed 775,979 employer applications for 1,699,957 positions for temporary and permanent labor certifications. This was a nine percent increase in the overall number of processed applications from the previous year. The process of reviewing every case is becoming a tedious task as the number of applicants is increasing every year.
+
+The increasing number of applicants every year calls for a Machine Learning based solution that can help in shortlisting the candidates having higher chances of VISA approval. OFLC has hired the firm EasyVisa for data-driven solutions. You as a data scientist at EasyVisa have to analyze the data provided and, with the help of a classification model:
+
+1. Facilitate the process of visa approvals.
+2. Recommend a suitable profile for the applicants for whom the visa should be certified or denied based on the drivers that significantly influence the case status.
+
 
 ### Data Description
 
-The data contains the different factors to analyze for the content. The detailed data dictionary is given below.
+The data contains the different attributes of the candidates. The detailed data dictionary is given below.
 
 ### Data Dictionary
 
-* visitors: Average number of visitors, in millions, to the platform in the past week
-* ad_impressions: Number of ad impressions, in millions, across all ad campaigns for the content (running and completed)
-* major_sports_event: Any major sports event on the day
-* genre: Genre of the content
-* dayofweek: Day of the release of the content
-* season: Season of the release of the content
-* views_trailer: Number of views, in millions, of the content trailer
-* views_content: Number of first-day views, in millions, of the content
+* case_id: ID of each visa application
+* continent: Information of continent the employee
+* education_of_employee: Information of education of the employee
+* has_job_experience: Does the employee has any job experience? Y= Yes; N = No
+* requires_job_training: Does the employee require any job training? Y = Yes; N = No
+* no_of_employees: Number of employees in the employer's company
+* yr_of_estab: Year in which the employer's company was established
+* region_of_employment: Information of foreign worker's intended region of employment in the US.
+* prevailing_wage: Average wage paid to similarly employed workers in a specific occupation in the area of intended employment. The purpose of the prevailing wage is to ensure that the foreign worker is not underpaid compared to other workers offering the same or similar service in the same area of employment.
+* unit_of_wage: Unit of prevailing wage. Values include Hourly, Weekly, Monthly, and Yearly.
+* full_time_position: Is the position of work full-time? Y = Full-Time Position; N = Part-Time Position
+* case_status: Flag indicating if the Visa was certified or denied
 
 ### Methodology
 
@@ -31,4 +45,9 @@ The data contains the different factors to analyze for the content. The detailed
     * Bivariate Analysis
     * Multivariate Analysis
 4. Model building 
-    * Linear Regression
+    * Bagging Classifier
+    * Random Forest
+    * Decision Tree
+    * Gradient Boosting Classifier
+    * AdaBoost Classifier
+5. Ensembling technique
